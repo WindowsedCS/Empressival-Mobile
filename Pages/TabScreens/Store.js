@@ -19,6 +19,7 @@ export default class Main extends Component {
       offerDuration: "",
       offerName: [],
       offerImage: [],
+      offerCost: [],
     }
   }
 
@@ -56,11 +57,18 @@ export default class Main extends Component {
             Object.values(weapons.data.data)[2][deviceLanguage.split("_")[0]],
             Object.values(weapons.data.data)[3][deviceLanguage.split("_")[0]],
           ]
+          let costList = [
+            Object.values(weapons.data.data)[0].cost,
+            Object.values(weapons.data.data)[1].cost,
+            Object.values(weapons.data.data)[2].cost,
+            Object.values(weapons.data.data)[3].cost,
+          ]
           this.setState({
             bundleImage: `https://media.valorant-api.com/bundles/${response.data.FeaturedBundle.Bundle.DataAssetID}/displayicon.png`,
             collection: bundle.data.data.displayName,
             offerImage: offerImage,
             offerName: weaponList,
+            offerCost: costList,
           })
           this.secondsToDhms(response.data.FeaturedBundle.Bundle.DurationRemainingInSeconds);
           this.countdown(response.data.FeaturedBundle.Bundle.DurationRemainingInSeconds, response.data.SkinsPanelLayout.SingleItemOffersRemainingDurationInSeconds);
@@ -96,7 +104,7 @@ export default class Main extends Component {
             marginRight: 20,
             marginLeft: 20,
             alignItems: 'center',
-          }} onTouchStart={() => this.onTouchStartFn()} onTouchEnd={() => this.onTouchEndFn()} onTouchCancel={() => this.onTouchEndFn()}>
+          }} onTouchStart={() => this.onTouchStartFn()} onTouchEnd={() => this.onTouchEndFn()} onTouchCancel={() => this.onTouchEndFn()} onTouchEndCapture={() => { this.props.navigation.navigate('Bundle'); }}>
             <Text style={[styles.featured, { includeFontPadding: false, marginTop: 10, marginBottom: 10 }]}>{process.language.TabStore.featured} | {this.state.bundleDuration}</Text>
             <Image source={(this.state.bundleImage != "" ? { uri: this.state.bundleImage } : tempIMG)} resizeMode={'contain'} style={styles.imageBundle}></Image>
             <Text style={[styles.collection, { includeFontPadding: false, marginTop: 10, marginBottom: 10 }]}>{this.state.collection} {process.language.TabStore.collection}</Text>
@@ -107,18 +115,22 @@ export default class Main extends Component {
           <View style={styles.container1}>
             <Text style={styles.offerName}>{this.state.offerName[0]}</Text>
             <Image source={(this.state.offerImage[0] != "" ? { uri: this.state.offerImage[0] } : tempIMG)} resizeMode={'contain'} style={styles.imageOffer}></Image>
+            <Text style={styles.offerCost}>{this.state.offerCost[0]} VP</Text>
           </View>
           <View style={styles.container1}>
             <Text style={styles.offerName}>{this.state.offerName[1]}</Text>
             <Image source={(this.state.offerImage[1] != "" ? { uri: this.state.offerImage[1] } : tempIMG)} resizeMode={'contain'} style={styles.imageOffer}></Image>
+            <Text style={styles.offerCost}>{this.state.offerCost[1]} VP</Text>
           </View>
           <View style={styles.container1}>
             <Text style={styles.offerName}>{this.state.offerName[2]}</Text>
             <Image source={(this.state.offerImage[2] != "" ? { uri: this.state.offerImage[2] } : tempIMG)} resizeMode={'contain'} style={styles.imageOffer}></Image>
+            <Text style={styles.offerCost}>{this.state.offerCost[2]} VP</Text>
           </View>
           <View style={styles.container1Bottom}>
             <Text style={styles.offerName}>{this.state.offerName[3]}</Text>
             <Image source={(this.state.offerImage[3] != "" ? { uri: this.state.offerImage[3] } : tempIMG)} resizeMode={'contain'} style={styles.imageOffer}></Image>
+            <Text style={styles.offerCost}>{this.state.offerCost[3]} VP</Text>
           </View>
           <View style={{ paddingTop: 68 }}></View>
         </ScrollView>
@@ -189,6 +201,14 @@ const styles = StyleSheet.create({
     fontFamily: 'NotoSansTC-Regular',
     textAlign: "center",
     paddingTop: 10
+  },
+  offerCost: {
+    color: 'white',
+    includeFontPadding: false,
+    fontSize: 21.5,
+    fontFamily: 'NotoSansTC-Regular',
+    textAlign: "center",
+    paddingBottom: 10
   },
   featured: {
     color: 'white',
