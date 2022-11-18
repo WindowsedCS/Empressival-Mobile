@@ -31,6 +31,10 @@
             "featured": "主打商品",
             "collection": "系列",
             "offers": "優惠"
+        },
+        "TabBundle": {
+            "inBundle": "組合包內容",
+            "vp": "特務幣"
         }
     },
     "en_US": {
@@ -65,6 +69,10 @@
             "featured": "FEATURED",
             "collection": "Collection",
             "offers": "Offers"
+        },
+        "TabBundle": {
+            "inBundle": "Items in Bundle",
+            "vp": "VP"
         }
     }
 }
