@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "empressival",
+    "slug": "empressival",
+    "version": "0.0.4",
+    "orientation": "portrait",
+    "icon": "./assets/bot1.png",
+    "userInterfaceStyle": "dark",
+    "owner": "watchandytw",
+    "splash": {
+      "image": "./assets/bot.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#202225"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.empressival.mobile"
+    },
+    "android": {
+      "package": "com.empressival.mobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/bot1.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "929499f0-2dc5-4b68-beaf-b45bef8f9567"
+      }
+    }
+  }
+}

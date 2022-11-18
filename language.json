@@ -1,0 +1,70 @@
+{
+    "zh_TW": {
+        "Home": {
+            "loginTitle": "歡迎使用《Empressival》",
+            "loginText": "在繼續使用本軟體前，請先登入您的Riot帳號，以利本軟體獲取您的遊戲資料。",
+            "loginButtonText": "登入",
+            "loginRsoButtonText": "以RSO登入"
+        },
+        "Login": {
+            "loginTitle": "Riot帳號登入",
+            "username": "使用者名稱",
+            "password": "密碼",
+            "login": "登入"
+        },
+        "TabName": {
+            "Home": "主頁",
+            "Progress": "進度",
+            "Career": "生涯",
+            "Collection": "收藏",
+            "Store": "商店"
+        },
+        "TabHome": {
+            "actRank": "章牌階",
+            "rankRating": "競技評分",
+            "daily": "每日任務",
+            "weekly": "每週任務",
+            "vp": "特務幣",
+            "rp": "輻能點數"
+        },
+        "TabStore": {
+            "featured": "主打商品",
+            "collection": "系列",
+            "offers": "優惠"
+        }
+    },
+    "en_US": {
+        "Home": {
+            "loginTitle": "Welcome to Empressival",
+            "loginText": "Before continue, please log in to your Riot Account.",
+            "loginButtonText": "Log In",
+            "loginRsoButtonText": "Log In with RSO"
+        },
+        "Login": {
+            "loginTitle": "Riot Account Sign In",
+            "username": "Username",
+            "password": "Password",
+            "login": "Log In"
+        },
+        "TabName": {
+            "Home": "HOME",
+            "Progress": "PROGRESS",
+            "Career": "CAREER",
+            "Collection": "COLLECTION",
+            "Store": "STORE"
+        },
+        "TabHome": {
+            "actRank": "ACT RANK",
+            "rankRating": "Rank Rating",
+            "daily": "DAILY MISSIONS",
+            "weekly": "WEEKLY MISSIONS",
+            "vp": "Valorant Points",
+            "rp": "Radianite Points"
+        },
+        "TabStore": {
+            "featured": "FEATURED",
+            "collection": "Collection",
+            "offers": "Offers"
+        }
+    }
+}
