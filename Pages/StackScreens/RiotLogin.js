@@ -63,7 +63,7 @@ export default class Main extends Component {
   render() {
     return (
       <View style={{ backgroundColor: "#202225", flex: 1, width: 100 * vw, height: 100 * vh }}>
-        <Spinner visible={this.state.loading} />
+        <Spinner visible={this.state.loading} textContent={process.language.Start.loadingTime} textStyle={{ color: "white", fontSize: 15, textAlign: 'center', fontFamily: 'NotoSansTC-Regular' }} />
         <WebView
           style={this.state.style}
           userAgent={Platform.OS === 'ios' ? "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1" : "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.5195.136 Mobile Safari/537.36"}

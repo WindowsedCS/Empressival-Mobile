@@ -4,6 +4,7 @@ import { WebView } from 'react-native-webview';
 import Spinner from 'react-native-loading-spinner-overlay';
 import * as SplashScreen from 'expo-splash-screen';
 import { vh, vw } from 'react-native-viewport-units-fix';
+import * as NavigationBar from 'expo-navigation-bar';
 const axios = require("axios").default;
 const querystring = require('querystring');
 const urlModule = require('url');
@@ -58,15 +59,13 @@ export default class Main extends Component {
   }
 
   UNSAFE_componentWillMount = async () => {
+    if (Platform.OS != 'ios') {
+      NavigationBar.setBackgroundColorAsync("#202225");
+    };
     this.authencated = false;
-    // setTimeout(async () => {
-    //   await SplashScreen.hideAsync();
-    //   this.setState({ loading: true });
-    // }, 1500)
   }
 
   componentDidMount = async () => {
-    // console.log(0)
     setTimeout(async () => {
       await SplashScreen.hideAsync();
       this.setState({ loading: true });
@@ -76,7 +75,7 @@ export default class Main extends Component {
   render() {
     return (
       <View style={{ backgroundColor: "#202225", flex: 1, width: 100 * vw, height: 100 * vh }}>
-        <Spinner visible={this.state.loading} />
+        <Spinner visible={this.state.loading} textContent={process.language.Start.loadingTime} textStyle={{ color: "white", fontSize: 15, textAlign: 'center', fontFamily: 'NotoSansTC-Regular' }} />
         <WebView
           style={{ display: 'none', backgroundColor: "#202225", flex: 1, width: 0, height: 0 }}
           userAgent={Platform.OS === 'ios' ? "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1" : "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.5195.136 Mobile Safari/537.36"}
@@ -121,37 +120,6 @@ export default class Main extends Component {
         />
       </View>
     );
-    /*<WebView
-          style={{ display: 'none', backgroundColor: "#202225" }}
-          userAgent={Platform.OS === 'ios' ? "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1" : "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.5195.136 Mobile Safari/537.36"}
-          source={{ uri: `https://auth.riotgames.com/login#client_id=play-valorant-web-prod&nonce=1&redirect_uri=https%3A%2F%2Fplayvalorant.com%2Fopt_in&response_type=token%20id_token${deviceLanguage === "zh_TW" ? "&ui_locales=zh-Hant" : "&ui_locales=en-US"}` }}
-          onNavigationStateChange={async (event) => {
-            //if (this.loaded === 3) {
-            let url = event.url;
-            if (url.startsWith("https://playvalorant.com/opt_in")) {
-              if (authencated === true) return;
-              authencated = true;
-              let parsedUrl = urlModule.parse(url);
-              let hash = parsedUrl.hash.replace('#', '');
-              let parts = querystring.parse(hash);
-              process.account = {
-                id_token: parts.id_token,
-                access_token: parts.access_token,
-              }
-              this.getUserData();
-            } else if (event.url.startsWith("https://auth.riotgames.com/login#client_id=play-valorant-web-prod&nonce=1&redirect_uri=https%3A%2F%2Fplayvalorant.com%2Fopt_in&response_type=token%20id_token")) {
-              if (event.loading === false) {
-                setTimeout(async () => {
-                  if (!authencated) {
-                    this.setState({ loading: false });
-                    this.props.navigation.navigate('Home');
-                  }
-                }, 2000)
-              }
-            }
-            //}
-          }}
-        />*/
   }
 }
 
