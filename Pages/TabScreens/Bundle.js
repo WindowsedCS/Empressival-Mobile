@@ -36,7 +36,6 @@ export default class Main extends Component {
       for (let item = 0; item < process.account.store.FeaturedBundle.Bundle.Items.length; item++) {
         let json = {};
         if (process.account.store.FeaturedBundle.Bundle.Items[item].Item.ItemID in weapons.data.data) {
-          console.log(item + 1)
           json = {
             name: weapons.data.data[process.account.store.FeaturedBundle.Bundle.Items[item].Item.ItemID][deviceLanguage.split("_")[0]],
             image: `https://media.valorant-api.com/weaponskinlevels/${process.account.store.FeaturedBundle.Bundle.Items[item].Item.ItemID}/displayicon.png`,
@@ -70,52 +69,52 @@ export default class Main extends Component {
           <View style={styles.containerOffers}>
             <Text style={[styles.featured, { includeFontPadding: false, marginTop: 10, marginBottom: 10 }]}>{process.language.TabBundle.inBundle}</Text>
           </View>
-          <View style={this.state.data["1"] != null ? this.state.data["1"].style : styles.invisible}>
+          <View style={this.state.data["1"] != null ? this.state.data["2"] == null ? styles.container1Bottom : styles.container1 : styles.invisible}>
             <Text style={styles.offerName}>{this.state.data["1"] != null ? this.state.data["1"].name : ""}</Text>
             <Image source={{ uri: this.state.data["1"] != null ? this.state.data["1"].image : "https://empressival.com/assets/images/empressival-title.png" }} resizeMode={'contain'} style={styles.imageOffer}></Image>
             <Text style={styles.offerCost}>{this.state.data["1"] != null ? this.state.data["1"].price : ""} {process.language.TabBundle.vp}</Text>
           </View>
-          <View style={this.state.data["2"] != null ? this.state.data["2"].style : styles.invisible}>
+          <View style={this.state.data["2"] != null ? this.state.data["3"] == null ? styles.container1Bottom : styles.container1 : styles.invisible}>
             <Text style={styles.offerName}>{this.state.data["2"] != null ? this.state.data["2"].name : ""}</Text>
             <Image source={{ uri: this.state.data["2"] != null ? this.state.data["2"].image : "https://empressival.com/assets/images/empressival-title.png" }} resizeMode={'contain'} style={styles.imageOffer}></Image>
             <Text style={styles.offerCost}>{this.state.data["2"] != null ? this.state.data["2"].price : ""} {process.language.TabBundle.vp}</Text>
           </View>
-          <View style={this.state.data["3"] != null ? this.state.data["3"].style : styles.invisible}>
+          <View style={this.state.data["3"] != null ? this.state.data["4"] == null ? styles.container1Bottom : styles.container1 : styles.invisible}>
             <Text style={styles.offerName}>{this.state.data["3"] != null ? this.state.data["3"].name : ""}</Text>
             <Image source={{ uri: this.state.data["3"] != null ? this.state.data["3"].image : "https://empressival.com/assets/images/empressival-title.png" }} resizeMode={'contain'} style={styles.imageOffer}></Image>
             <Text style={styles.offerCost}>{this.state.data["3"] != null ? this.state.data["3"].price : ""} {process.language.TabBundle.vp}</Text>
           </View>
-          <View style={this.state.data["4"] != null ? this.state.data["4"].style : styles.invisible}>
+          <View style={this.state.data["4"] != null ? this.state.data["5"] == null ? styles.container1Bottom : styles.container1 : styles.invisible}>
             <Text style={styles.offerName}>{this.state.data["4"] != null ? this.state.data["4"].name : ""}</Text>
             <Image source={{ uri: this.state.data["4"] != null ? this.state.data["4"].image : "https://empressival.com/assets/images/empressival-title.png" }} resizeMode={'contain'} style={styles.imageOffer}></Image>
             <Text style={styles.offerCost}>{this.state.data["4"] != null ? this.state.data["4"].price : ""} {process.language.TabBundle.vp}</Text>
           </View>
-          <View style={this.state.data["5"] != null ? this.state.data["5"].style : styles.invisible}>
+          <View style={this.state.data["5"] != null ? this.state.data["6"] == null ? styles.container1Bottom : styles.container1 : styles.invisible}>
             <Text style={styles.offerName}>{this.state.data["5"] != null ? this.state.data["5"].name : ""}</Text>
             <Image source={{ uri: this.state.data["5"] != null ? this.state.data["5"].image : "https://empressival.com/assets/images/empressival-title.png" }} resizeMode={'contain'} style={styles.imageOffer}></Image>
             <Text style={styles.offerCost}>{this.state.data["5"] != null ? this.state.data["5"].price : ""} {process.language.TabBundle.vp}</Text>
           </View>
-          <View style={this.state.data["6"] != null ? this.state.data["6"].style : styles.invisible}>
+          <View style={this.state.data["6"] != null ? this.state.data["7"] == null ? styles.container1Bottom : styles.container1 : styles.invisible}>
             <Text style={styles.offerName}>{this.state.data["6"] != null ? this.state.data["6"].name : ""}</Text>
             <Image source={{ uri: this.state.data["6"] != null ? this.state.data["6"].image : "https://empressival.com/assets/images/empressival-title.png" }} resizeMode={'contain'} style={styles.imageOffer}></Image>
             <Text style={styles.offerCost}>{this.state.data["6"] != null ? this.state.data["6"].price : ""} {process.language.TabBundle.vp}</Text>
           </View>
-          <View style={this.state.data["7"] != null ? this.state.data["7"].style : styles.invisible}>
+          <View style={this.state.data["7"] != null ? this.state.data["8"] == null ? styles.container1Bottom : styles.container1 : styles.invisible}>
             <Text style={styles.offerName}>{this.state.data["7"] != null ? this.state.data["7"].name : ""}</Text>
             <Image source={{ uri: this.state.data["7"] != null ? this.state.data["7"].image : "https://empressival.com/assets/images/empressival-title.png" }} resizeMode={'contain'} style={styles.imageOffer}></Image>
             <Text style={styles.offerCost}>{this.state.data["7"] != null ? this.state.data["7"].price : ""} {process.language.TabBundle.vp}</Text>
           </View>
-          <View style={this.state.data["8"] != null ? this.state.data["8"].style : styles.invisible}>
+          <View style={this.state.data["8"] != null ? this.state.data["9"] == null ? styles.container1Bottom : styles.container1 : styles.invisible}>
             <Text style={styles.offerName}>{this.state.data["8"] != null ? this.state.data["8"].name : ""}</Text>
             <Image source={{ uri: this.state.data["8"] != null ? this.state.data["8"].image : "https://empressival.com/assets/images/empressival-title.png" }} resizeMode={'contain'} style={styles.imageOffer}></Image>
             <Text style={styles.offerCost}>{this.state.data["8"] != null ? this.state.data["8"].price : ""} {process.language.TabBundle.vp}</Text>
           </View>
-          <View style={this.state.data["9"] != null ? this.state.data["9"].style : styles.invisible}>
+          <View style={this.state.data["9"] != null ? this.state.data["10"] == null ? styles.container1Bottom : styles.container1 : styles.invisible}>
             <Text style={styles.offerName}>{this.state.data["9"] != null ? this.state.data["9"].name : ""}</Text>
             <Image source={{ uri: this.state.data["9"] != null ? this.state.data["9"].image : "https://empressival.com/assets/images/empressival-title.png" }} resizeMode={'contain'} style={styles.imageOffer}></Image>
             <Text style={styles.offerCost}>{this.state.data["9"] != null ? this.state.data["9"].price : ""} {process.language.TabBundle.vp}</Text>
           </View>
-          <View style={this.state.data["10"] != null ? this.state.data["10"].style : styles.invisible}>
+          <View style={this.state.data["10"] != null ? styles.container1Bottom : styles.invisible}>
             <Text style={styles.offerName}>{this.state.data["10"] != null ? this.state.data["10"].name : ""}</Text>
             <Image source={{ uri: this.state.data["10"] != null ? this.state.data["10"].image : "https://empressival.com/assets/images/empressival-title.png" }} resizeMode={'contain'} style={styles.imageOffer}></Image>
             <Text style={styles.offerCost}>{this.state.data["10"] != null ? this.state.data["10"].price : ""} {process.language.TabBundle.vp}</Text>
@@ -142,8 +141,8 @@ const styles = StyleSheet.create({
     marginRight: 20,
     marginLeft: 20,
     alignItems: 'center',
-    borderBottomColor: "white",
-    borderBottomWidth: 1,
+    borderTopColor: "white",
+    borderTopWidth: 1,
   },
   container1Bottom: {
     backgroundColor: "#343840",
@@ -153,6 +152,8 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     alignItems: 'center',
     borderRadius: 0,
+    borderTopColor: "white",
+    borderTopWidth: 1,
     borderBottomStartRadius: 8,
     borderBottomRightRadius: 8,
   },
@@ -166,8 +167,6 @@ const styles = StyleSheet.create({
     marginRight: 20,
     marginLeft: 20,
     alignItems: 'center',
-    borderBottomColor: "white",
-    borderBottomWidth: 1,
   },
   imageBundle: {
     width: '95%',
