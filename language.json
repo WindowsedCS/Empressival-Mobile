@@ -30,7 +30,8 @@
         "TabStore": {
             "featured": "主打商品",
             "collection": "系列",
-            "offers": "優惠"
+            "offers": "優惠",
+            "vp": "特務幣"
         },
         "TabBundle": {
             "inBundle": "組合包內容",
@@ -68,7 +69,8 @@
         "TabStore": {
             "featured": "FEATURED",
             "collection": "Collection",
-            "offers": "Offers"
+            "offers": "Offers",
+            "vp": "VP"
         },
         "TabBundle": {
             "inBundle": "Items in Bundle",

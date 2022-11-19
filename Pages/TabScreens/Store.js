@@ -115,22 +115,22 @@ export default class Main extends Component {
           <View style={styles.container1}>
             <Text style={styles.offerName}>{this.state.offerName[0]}</Text>
             <Image source={(this.state.offerImage[0] != "" ? { uri: this.state.offerImage[0] } : tempIMG)} resizeMode={'contain'} style={styles.imageOffer}></Image>
-            <Text style={styles.offerCost}>{this.state.offerCost[0]} VP</Text>
+            <Text style={styles.offerCost}>{this.state.offerCost[0]} {process.language.TabStore.vp}</Text>
           </View>
           <View style={styles.container1}>
             <Text style={styles.offerName}>{this.state.offerName[1]}</Text>
             <Image source={(this.state.offerImage[1] != "" ? { uri: this.state.offerImage[1] } : tempIMG)} resizeMode={'contain'} style={styles.imageOffer}></Image>
-            <Text style={styles.offerCost}>{this.state.offerCost[1]} VP</Text>
+            <Text style={styles.offerCost}>{this.state.offerCost[1]} {process.language.TabStore.vp}</Text>
           </View>
           <View style={styles.container1}>
             <Text style={styles.offerName}>{this.state.offerName[2]}</Text>
             <Image source={(this.state.offerImage[2] != "" ? { uri: this.state.offerImage[2] } : tempIMG)} resizeMode={'contain'} style={styles.imageOffer}></Image>
-            <Text style={styles.offerCost}>{this.state.offerCost[2]} VP</Text>
+            <Text style={styles.offerCost}>{this.state.offerCost[2]} {process.language.TabStore.vp}</Text>
           </View>
           <View style={styles.container1Bottom}>
             <Text style={styles.offerName}>{this.state.offerName[3]}</Text>
             <Image source={(this.state.offerImage[3] != "" ? { uri: this.state.offerImage[3] } : tempIMG)} resizeMode={'contain'} style={styles.imageOffer}></Image>
-            <Text style={styles.offerCost}>{this.state.offerCost[3]} VP</Text>
+            <Text style={styles.offerCost}>{this.state.offerCost[3]} {process.language.TabStore.vp}</Text>
           </View>
           <View style={{ paddingTop: 68 }}></View>
         </ScrollView>
