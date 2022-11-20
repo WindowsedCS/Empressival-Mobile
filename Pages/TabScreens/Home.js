@@ -333,6 +333,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     width: 68.5 * vw,
     position: 'absolute',
+    maxWidth: '90%',
   },
   rankRatingTextNum: {
     color: 'white',
