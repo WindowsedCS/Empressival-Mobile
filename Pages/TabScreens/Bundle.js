@@ -121,7 +121,6 @@ export default class Main extends Component {
           </View>
           <View style={{ paddingTop: 68 }}></View>
         </ScrollView>
-        <StatusBar backgroundColor="#202225" style="light" />
       </View>
     );
   }

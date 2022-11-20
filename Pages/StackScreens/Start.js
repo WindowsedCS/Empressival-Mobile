@@ -5,6 +5,7 @@ import Spinner from 'react-native-loading-spinner-overlay';
 import * as SplashScreen from 'expo-splash-screen';
 import { vh, vw } from 'react-native-viewport-units-fix';
 import * as NavigationBar from 'expo-navigation-bar';
+import { StatusBar } from 'expo-status-bar';
 const axios = require("axios").default;
 const querystring = require('querystring');
 const urlModule = require('url');
@@ -118,6 +119,7 @@ export default class Main extends Component {
           }}
           sharedCookiesEnabled={true}
         />
+        <StatusBar style='light' barStyle='light-content' />
       </View>
     );
   }

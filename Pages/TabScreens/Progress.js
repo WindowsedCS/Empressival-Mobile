@@ -16,7 +16,6 @@ export default class Main extends Component {
       <View style={styles.container}>
         <View style={styles.container1}>
           <Text style={styles.loginTitle}>{process.account.player.GameName}#{process.account.player.TagLine}2</Text>
-          <StatusBar backgroundColor="#202225" style="light" />
         </View>
       </View>
     );

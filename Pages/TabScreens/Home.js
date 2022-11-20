@@ -199,7 +199,6 @@ export default class Main extends Component {
           </View>
           <View style={styles.padding}></View>
         </ScrollView>
-        <StatusBar backgroundColor="#202225" style="light" />
       </View >
     );
   }

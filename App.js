@@ -56,7 +56,7 @@ export default function App() {
           <Stack.Screen options={{ headerShown: false, ...TransitionPresets.RevealFromBottomAndroid }} name="Main" component={StackMain} />
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar backgroundColor="#202225" style="light" />
+      <StatusBar style='light' barStyle='light-content' />
     </SafeAreaProvider>
   );
 }
