@@ -1,7 +1,7 @@
 [中文](https://github.com/WindowsedCS/Empressival-Mobile/blob/development/README_zh-TW.md)
 
 # Empressival-Mobile
-A repository containing the source code of the mobile app of Empressival.# Introduction
+A repository containing the source code of the mobile app of Empressival.
 
 ## Introduction
 Empressival is a Discord Bot which let you to search for your daily Valorant store offers anytime and anywhere. We're now not only on Discord, but also on your mobile phone. Yay!
