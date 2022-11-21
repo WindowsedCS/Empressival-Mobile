@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Image, ScrollView, NativeModules } from 'react-native';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 const { vw, vh } = require('react-native-viewport-units-fix');
 import { Component } from 'react';
 
@@ -7,17 +7,40 @@ export default class Main extends Component {
   constructor(props) {
     super();
     this.props = props;
-    this.state = {
-    }
+  }
+
+  componentDidMount = async () => {
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.container1}>
-          <Text style={styles.loginTitle}>{process.account.player.GameName}#{process.account.player.TagLine}2</Text>
-        </View>
-      </View>
+        <ScrollView scrollEnabled={true} showsVerticalScrollIndicator={false}>
+          <View style={{ width: 100 * vw, height: -1 }}>
+            <View style={styles.container1}>
+              <Text style={styles.playerLevel}>{process.account.level.Level}</Text>
+              <Image source={{ uri: `https://media.valorant-api.com/levelborders/${process.account.identity.PreferredLevelBorderID}/levelnumberappearance.png` }} resizeMode={'contain'} style={styles.levelBorder}></Image>
+              <View>
+                <Image source={require('../../assets/progressionBarStretch.png')} resizeMode={'contain'} style={styles.rankProgress}></Image>
+                <View style={{ marginTop: '3.7%', position: 'absolute', marginLeft: '1.5%' }}>
+                  <View style={{
+                    position: 'absolute',
+                    borderColor: "#22FFCC",
+                    borderWidth: 1.75,
+                    borderLeftWidth: ((68.5 * vw) * (process.account.level.XP / 5000)),
+                    borderRadius: 8,
+                    position: 'absolute',
+                  }}>
+                  </View>
+                </View>
+                <Text style={styles.levelNum}><Text style={styles.greenText}>{process.account.level.XP.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</Text>/5,000 AP to level {process.account.level.Level + 1}</Text>
+              </View>
+              <View style={styles.boxBottom}></View>
+            </View>
+          </View>
+          <View style={styles.padding}></View>
+        </ScrollView>
+      </View >
     );
   }
 }
@@ -27,44 +50,66 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#202225',
     alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: getStatusBarHeight(),
+    includeFontPadding: false,
   },
-  loginTitle: {
-    color: 'white',
-    fontSize: 26,
-    marginTop: 5.5 * vh,
-    fontFamily: 'NotoSansTC-Regular',
+  levelBorder: {
+    width: '100%',
+    height: undefined,
+    aspectRatio: 10,
+    zIndex: 1,
+    marginTop: 10,
+    includeFontPadding: false,
   },
-  loginText: {
-    fontSize: 15,
-    borderColor: '#202225',
-    borderLeftWidth: 20,
-    borderRightWidth: 20,
-    color: 'gray',
-    marginTop: 1.5 * vh,
-    marginBottom: 6 * vh,
-    textAlign: 'center',
-    fontFamily: 'NotoSansTC-Regular',
-  },
-  loginLogo: {
-    width: 45 * vh,
-    height: 28 * vh,
-  },
-  loginButton: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: 6 * vh,
-    width: 90 * vw,
-    borderRadius: 4,
-    elevation: 3,
-    backgroundColor: '#5865F2',
-  },
-  loginButtonText: {
+  playerLevel: {
     color: 'white',
     fontSize: 16,
+    textAlign: "center",
     fontFamily: 'NotoSansTC-Regular',
+    includeFontPadding: false,
+    marginTop: '4%',
+    zIndex: 2,
+    position: 'absolute',
   },
-  spinnerTextStyle: {
-    color: '#FFF'
+  container1: {
+    backgroundColor: "#343840",
+    borderColor: "#343840",
+    marginTop: 12,
+    marginRight: 20,
+    marginLeft: 20,
+    borderRadius: 8,
+    alignItems: 'center',
   },
+  rankProgress: {
+    width: '80%',
+    height: undefined,
+    aspectRatio: 10,
+    zIndex: 1,
+    marginBottom: 23,
+    includeFontPadding: false,
+  },
+  boxBottom: {
+    marginBottom: 3,
+  },
+  padding: {
+    paddingBottom: 68,
+  },
+  levelNum: {
+    color: 'white',
+    fontFamily: 'NotoSansTC-Regular',
+    includeFontPadding: false,
+    textAlign: 'center',
+    marginTop: '7%',
+    width: '100%',
+    marginRight: '47%',
+    height: '100%',
+    zIndex: 0,
+    fontSize: 12,
+    position: 'absolute',
+  },
+  greenText: {
+    color: "#22FFCC",
+    fontWeight: 'bold',
+    includeFontPadding: false,
+  }
 });
