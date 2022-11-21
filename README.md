@@ -1,3 +1,5 @@
+[中文](https://github.com/WindowsedCS/Empressival-Mobile/blob/development/README_zh-TW.md)
+
 # Empressival-Mobile
 A repository containing the source code of the mobile app of Empressival.# Introduction
 
@@ -8,8 +10,17 @@ Empressival is a Discord Bot which let you to search for your daily Valorant sto
 | Contributors |
 |:-----------:|
 | WatchandyTW |
-I know sometimes that I'm so "good" at programming, like the Bundle screen, so PR open for everyone.
+
+I know sometimes that I'm so "good" at programming, like the Bundle screen, so PR open for everyone to submit.
+
+# Usage
+Download the latest APK file from [here](https://github.com/WindowsedCS/Empressival-Mobile/releases) and install directly on your phone. IPA file for iOS is currently not provided due to the license issue.
 
 # Thanks 
- - [Valorant-API](https://dash.valorant-api.com/) for the cdn images (thanks Officer)
- - [valorant.js](https://github.com/liamcottle/valorant.js) for the original game API stuff
+- [Valorant-API.com](https://valorant-api.com/) for cdn images (thanks Officer)
+- [valorant.js](https://github.com/liamcottle/valorant.js) for original game API stuff
+- [CUE4Parse](https://github.com/FabianFG/CUE4Parse) for parsing game assets
+- [FModel](https://fmodel.app) for extracting images from the game
+
+# Note
+I'm just a high school student who is trying to make the best thing for the Valorant Community also my future, sometimes I code simple stuff into complicated. If it happens, please submit a Pull Request and point it out for me. I appreciate all your supports, Agent.
