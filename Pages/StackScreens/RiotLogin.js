@@ -46,7 +46,7 @@ export default class Main extends Component {
             process.missions.details = missions.data.data;
             // const offers = await valorant.getStoreOffers();
             // const settings = valorant.getPlayerSettings();
-            process.account.level = xp.data.Progress.Level;
+            process.account.level = xp.data.Progress;
             process.account.identity = loadout.data.Identity;
             process.account.competitiveTier = (mmr.data.QueueSkills.competitive.CurrentSeasonGamesNeededForRating == 0) ? mmr.data.QueueSkills.competitive.SeasonalInfoBySeasonID[seasonId].CompetitiveTier : 0;
             process.account.rankedRating = (mmr.data.QueueSkills.competitive.CurrentSeasonGamesNeededForRating == 0) ? mmr.data.QueueSkills.competitive.SeasonalInfoBySeasonID[seasonId].RankedRating : 0;

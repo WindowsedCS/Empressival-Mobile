@@ -69,7 +69,7 @@ export default class Main extends Component {
               <LinearGradient colors={['rgba(32,34,37,0)', 'rgba(32,34,37,0)', 'rgba(32,34,37,0)', 'rgba(32,34,37,0.2)', 'rgba(32,34,37,0.6)', 'rgba(32,34,37,1)']} style={styles.playerCard} />
               <Image source={{ uri: `https://media.valorant-api.com/levelborders/${process.account.identity.PreferredLevelBorderID}/levelnumberappearance.png` }} resizeMode={'contain'} style={styles.levelBorder}></Image>
               <Text style={styles.playerName}>{process.account.player.GameName}#{process.account.player.TagLine}</Text>
-              <Text style={styles.playerLevel}>{process.account.level}</Text>
+              <Text style={styles.playerLevel}>{process.account.level.Level}</Text>
               <Image source={{ uri: `${require("../../valorant.js").Tiers.image[process.account.competitiveTier]}` }} resizeMode={'contain'} style={styles.playerRank}></Image>
               <Image source={require('../../assets/playerCardBg.png')} resizeMode={'contain'} style={styles.playerCardBg}></Image>
               <Text></Text>
