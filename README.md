@@ -1,4 +1,4 @@
-[中文](https://github.com/WindowsedCS/Empressival-Mobile/blob/development/README_zh-TW.md)
+English | [中文](https://github.com/WindowsedCS/Empressival-Mobile/blob/development/README_zh-TW.md)
 
 # Empressival-Mobile
 A repository containing the source code of the mobile app of Empressival.
@@ -31,11 +31,16 @@ Download the latest APK file from [here](https://github.com/WindowsedCS/Empressi
 - [ ] Player Statistics
 - [ ] More
 
-## Thanks 
+## Note
+I'm just a high school student who is trying to make the best thing for the Valorant Community also my future, sometimes I code simple stuff into complicated. If it happens, please submit a Pull Request and point it out for me. I appreciate all your supports, Agent.
+
+## Acknowledgements 
 - [Valorant-API.com](https://valorant-api.com/) for cdn images (thanks Officer)
 - [valorant.js](https://github.com/liamcottle/valorant.js) for original game API stuff
 - [CUE4Parse](https://github.com/FabianFG/CUE4Parse) for parsing game assets
 - [FModel](https://fmodel.app) for extracting images from the game
 
-## Note
-I'm just a high school student who is trying to make the best thing for the Valorant Community also my future, sometimes I code simple stuff into complicated. If it happens, please submit a Pull Request and point it out for me. I appreciate all your supports, Agent.
+## Disclaimer
+This project not affiliated nor endorsed by Riot Games, all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+
+Empressival was created under Riot Games' "Legal Jibber Jabber" policy using assets that are owned by Riot Games. Contact me on Discord for the needs.
